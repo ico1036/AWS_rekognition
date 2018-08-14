@@ -35,12 +35,17 @@ default = list(set(name))
 
 # Search special timestamp
 result=[]
-inx=0
+sw=0
 print(len(x))
 
 for i in range(len(x)):
 	for j in x[i][1]:
 		if j not in default:
+			if sw==0:	
+				result.append(x[i-2:i])
+				result.append(x[i:i+3])
+				sw=1
+			else:
 				result.append(x[i:i+3])
 print(result)
 for i in range(1,len(result)-1):
