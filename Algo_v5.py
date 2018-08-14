@@ -53,5 +53,13 @@ for i in range(1,len(result)-1):
 		del result[i]
 
 print("############ result ##############")
+time_result=[]
+for i in range(len(result)):
+	for j in range(len(result[i])):
+		time_result.append(result[i][j][0])
+
+print("####### conserved time-data #######")
 print(result)
+print("####### conserved time #######")
+print(time_result)
 		
